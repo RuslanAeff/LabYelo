@@ -9,9 +9,9 @@ btns.forEach(btn => {
         let cartName = e.target.parentElement.parentElement.children[0].children[0].textContent;
 
             let basketList = JSON.parse(localStorage.getItem("basket"));
-            // basketList.push({
-            //     name: cartName
-            // })
+             basketList.push({
+                 name: cartName
+             })
             localStorage.setItem("basket",JSON.stringify(basketList))
     })
 });
